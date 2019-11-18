@@ -1,4 +1,4 @@
-//Bruna Custódio e Letícia Oliveira
+//Bruna CustÃ³dio e LetÃ­cia Oliveira
 var x = 360;
 
 var y = 300;
@@ -33,7 +33,9 @@ var pulo = false;
 
 var yp = 0; 
 
-var xdo, ydo;
+var xdo = 40;
+
+var ydo = 440;
 
 var contFrames = 0; 
 
@@ -84,9 +86,7 @@ function preload() {
 }
 
 function setup() {
-   createCanvas(500, 500);
-   xdo = 50;	
-   ydo = 440; 
+   createCanvas(500, 500); 
    frameRate(30);
    
    for(var i = 0; i < tam; i++){
@@ -150,7 +150,7 @@ function jogo(){
             pulo = true; 
             contFrames = 0; 
          }
-        // movimentação do pulo 
+        // movimentaÃ§Ã£o do pulo 
         // se o pulo estiver ativo 
         if (pulo) {
             contFrames++; 
@@ -159,7 +159,7 @@ function jogo(){
           //Se o valor da amplitude do pulo for menor que zero
             if (yp > 0) {
                             // O pulo deve ser finalizado 
-                // habilida a ocorrência de um novo pulo 
+                // habilida a ocorrÃªncia de um novo pulo 
                 pulo = false;
                 yp = 0; 		
             }
@@ -213,7 +213,7 @@ function jogo(){
 
        text('Pontos: '+pontos, 200, 30);
 
-       text('Nível: '+nivel, 420, 30);
+       text('NÃ­vel: '+nivel, 420, 30);
 
 
       for(i = 0; i < tam; i++){  
