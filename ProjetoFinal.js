@@ -144,7 +144,7 @@ function jogo(){
         if(nivel == 2 || nivel == 4){
         background(inivel);
         } 
-            // Tratamento das teclas 
+            // movimentação do pulo
          if (keyIsDown(UP_ARROW) && (! pulo) ){ 
             sombateu.play();
             pulo = true; 
@@ -155,7 +155,7 @@ function jogo(){
         if (pulo) {
             contFrames++; 
             // movimenta o pulo  
-            yp = 0.5*(contFrames)*(contFrames - 30);
+            yp = 0.7*(contFrames)*(contFrames - 30);
           //Se o valor da amplitude do pulo for menor que zero
             if (yp > 0) {
                             // O pulo deve ser finalizado 
@@ -215,7 +215,7 @@ function jogo(){
 
        text('Nível: '+nivel, 420, 30);
 
-
+      // colisão
       for(i = 0; i < tam; i++){  
      
         if(dist(xdo, 430+yp, vx[i], vy) < raioP + raioO){
